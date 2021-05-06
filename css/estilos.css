@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor-principal{
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 250px;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header   header   header  header"
+                         "princ    princ    princ   princ"
+                         "main     main     main    aside"
+                         "main     main     main    aside"
+                         "footer   footer   footer  footer";
+}
+
+    /* ------  HEADER  ------ */
+
+header{
+    background: #F87B97;
+    width: 100%;
+    padding: 3px;
+    grid-area: header;
+    position: fixed;
+    margin-bottom: 25px;
+}
+
+header .contenedor{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header .contenedor h1{
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+header .contenedor .menu a{
+  margin-right: 20px;
+  padding-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+header .contenedor .menu a:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+
+    /* ------  MAIN AND IMAGE PRINCIPAL ------ */
+
+.home{
+    grid-area: princ;
+    text-align: center;
+}
+
+.home  .espacio-inicial img{
+    vertical-align: top;
+    margin: 0 auto;
+    width: 80%;
+    height: 500px;
+}
+
+/* -------------------------------------------------------------------- */
+main{
+    grid-area: main;
+    padding: 20px;
+}
+
+main .caja-padre  img{
+   width: 500px;
+   height: 300px;
+   margin-right: 28px;
+   margin-bottom: 28px;
+   vertical-align: top;
+   border-radius: 3px;
+   box-shadow: 0 5px 10px rgba(0,0,0, .5);
+   float: left;
+}
+
+
+main .caja-padre p{
+   font-size: 18px;
+   line-height: 35px;
+   margin-bottom: 20px;  
+   font-weight: 300;
+} 
+
+main .caja-padre h1{
+ text-align: center;
+}
+
+    /* ------  MAIN  ------ */
+
+aside{
+    grid-area: aside;
+    grid-row-start: 3;
+    display: grid;
+    align-items: center; /*Para los auncios*/
+    background: #6babebc5;
+    text-align: center; /*Para el texto*/
+}
+
+aside .anuncio-1 .contenido h4{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+aside .anuncio-1 .contenido .dias{
+    color: #000;
+    font-size: 17px;
+    font-weight: bold; 
+}
+
+aside .anuncio-1 .contenido .hora{
+    margin-bottom: 30px;
+}
+  
+
+/* Using Single Page Application with CSS*/
+
